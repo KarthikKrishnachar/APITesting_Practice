@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="AsteroidsNeoWs_api_URL"
+		value="https://api.nasa.gov/neo/rest/v1
+	/feed?start_date=2015-09-07&amp;end_date=2015-09-08&amp;api_key=DEMO_KEY" />
+	<parameter name="Reqres_Get_User_list"
+		value="https://reqres.in/api/users/2" />
+	<test thread-count="5" name="Test">
+
+		<classes>
+		<class name="com.nasaapi.testproject.Reqres_GET_APIUsers" />
+			
+			<class name="com.nasaapi.testproject.AsteroidsNeoWs_Test">
+				<methods>
+					<exclude name=".*" />
+				</methods>
+
+			</class>
+		</classes>
+
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
